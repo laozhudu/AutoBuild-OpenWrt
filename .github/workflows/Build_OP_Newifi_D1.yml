@@ -5,7 +5,7 @@
 # Youtube Channel: https://goo.gl/fvkdwm 
 #=================================================
 
-name: Build_Newifi_D2
+name: Build_Newifi_D1
 
 on: 
   release:
@@ -70,7 +70,7 @@ jobs:
         ./scripts/feeds install -a
     - name: Configuration Customization - Build_Newifi_D2
       env:
-        CONFIG_FILE: 'Newifi_D2.config'
+        CONFIG_FILE: 'Newifi_D1.config'
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x ./customize.sh && ./customize.sh
